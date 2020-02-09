@@ -18,3 +18,14 @@ Route::get('/', function () {
 Route::get('/countrain/', function () {
     return view('index');
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+Route::get('/countrain/first-1/', function () {
+    return view('first-1');
+});
+>>>>>>> index progressing , before making auth
+>>>>>>> temp
