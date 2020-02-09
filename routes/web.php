@@ -23,3 +23,6 @@ Route::get('/countrain/', function () {
 Route::get('/countrain/first-1/', function () {
     return view('first-1');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
