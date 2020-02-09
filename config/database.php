@@ -15,15 +15,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
-    'default' => env('DB_CONNECTION', 'mysql'),
-=======
-<<<<<<< HEAD
-    'default' => env('DB_CONNECTION', 'mysql'),
-=======
     'default' => env('DB_CONNECTION', 'sqlite'),
->>>>>>> index progressing , before making auth
->>>>>>> temp
 
     /*
     |--------------------------------------------------------------------------
