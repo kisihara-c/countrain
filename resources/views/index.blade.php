@@ -24,6 +24,7 @@
 
         .forRegistered{float:right;margin:5% 0 0 0;padding:0 8% 0 8%;clear:right}
 
+
     </style>
 
 </head>
@@ -37,9 +38,19 @@
 
 <div class="forFirst">ご利用は<a href="piyo" class="bButton"><span class="yellowL">はじめてです</span><span class="period">.</span></a></div>
 
-<div class="forRegistered">登録済</div>
+<div class="forRegistered">登録済<span class="period">.</span>
 <!--　forRegisteredとforFirstはblock要素。そしてここに続きで認証ボックスを入れる。 -->
 
+<form action="/countrain/ct-main" method="post">
+<table>
+    @csrf
+    <tr><th>mail: </th><td><input type="text" name="email"></td></tr>
+    <tr><th>pass: </th><td><input type="password" name="password"></td></tr>
+    <tr><th></th><td><input class="bbutton" type="image" name="send" src={{asset('/img/login-button.png')}} alt="送信する."></td></tr>
+</table>
+</form>
+
+</div>
 
 </body>
 

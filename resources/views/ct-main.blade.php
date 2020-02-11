@@ -2,23 +2,19 @@
 <head>
     <title>countrain-first-1</title>
     <style>
-        body{background-color:#0c0c0f;}
-
-        h1{color:#ede5bb;text-align:right;}
-
-        .train img{position:absolute;bottom:0;height:90%;max-width:90%}
         body{background-color:#0c0c0f;color:#FFFFFF}
 
         h1{color:#ede5bb;text-align:right;letter-spacing:0.2em}
 
         .period{color:#FA6E6C}
 
-        .train img{position:absolute;bottom:0;height:90%;max-width:90%;}
-
         .bButton{color:#FFFFFF;text-decoration:none;background-color:#9684E340;}
         .bButton:hover{opacity:0.6;transition:all 0.1s;}
 
         .yellowL{color:#EDE5BB}
+
+        .textbox{text-align:right; font-size:14px; position:relative;margin:35% 5% 5% 30%;
+        padding:0.5em;0em;border:solid 1px #FFFFFF;}
 
         .conductress img{position:absolute;bottom:0;max-height:90%;max-width:90%}
 
@@ -31,8 +27,11 @@
 
 <h1>countrain<span class="period">.</div></h1>
 
-<div class="conductress"><img src= {{asset('/img/conductress.png')}} ></div>
+<div class="idDisp">お客様の名前：{{$idDisp}}</div>
 
+<div class="textbox">countrainにようこそ！</div>
+
+<div class="conductress"><img src= {{asset('/img/conductress.png')}} ></div>
 
 
 </body>
