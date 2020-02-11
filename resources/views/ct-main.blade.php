@@ -13,6 +13,9 @@
 
         .yellowL{color:#EDE5BB}
 
+        .idDisp{text-align:right;}
+        .logoutbutton{text-align:right;float:right;}
+
         .textbox{text-align:right; font-size:14px; position:relative;margin:35% 5% 5% 30%;
         padding:0.5em;0em;border:solid 1px #FFFFFF;}
 
@@ -28,6 +31,8 @@
 <h1>countrain<span class="period">.</div></h1>
 
 <div class="idDisp">お客様の名前：{{$idDisp}}</div>
+
+<div class="logoutbutton"><a href="logout" class="bButton">ログアウト</a></div>
 
 <div class="textbox">countrainにようこそ！</div>
 

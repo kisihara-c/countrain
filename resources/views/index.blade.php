@@ -39,7 +39,6 @@
 <div class="forFirst">ご利用は<a href="piyo" class="bButton"><span class="yellowL">はじめてです</span><span class="period">.</span></a></div>
 
 <div class="forRegistered">登録済<span class="period">.</span>
-<!--　forRegisteredとforFirstはblock要素。そしてここに続きで認証ボックスを入れる。 -->
 
 <form action="/countrain/ct-main" method="post">
 <table>

@@ -31,4 +31,10 @@ class TrainController extends Controller
         return view('ct-main',['idDisp' => Auth::user()->name]);
     }
 
+    public function logout(Request $request){
+
+        Auth::logout();
+        return redirect("countrain");
+    }
+
 }
