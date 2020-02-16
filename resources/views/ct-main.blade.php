@@ -1,46 +1,42 @@
-<html>
-<head>
-    <title>countrain-first-1</title>
-    <style>
-        body{background-color:#0c0c0f;color:#FFFFFF}
+@extends('layouts.ct-base')
 
-        h1{color:#ede5bb;text-align:right;letter-spacing:0.2em}
+@section('title','countrain')
 
-        .period{color:#FA6E6C}
+@php
+$welcomeText = [
+'countrainにようこそ！',
+'止まるんじゃねぇぞ…',
+'すっごーい！',
+'諦めないその心こそが、最大の武器になるのだからな！'
+];
+$randomN = rand(0,count($welcomeText)-1);
+@endphp
 
-        .bButton{color:#FFFFFF;text-decoration:none;background-color:#9684E340;}
-        .bButton:hover{opacity:0.6;transition:all 0.1s;}
+@section('other')
+<div style="clear:both;"></div>
+<div class="menuBlock" style="display:flex;justify-content:flex-end;margin-top:2%;">
+<div style=
+"background-color:#454B58;
+margin-left:2em;margin-right:2em;
+width:10em;height:15em;">
+<p>目的地</p>
+<p>世界の海の最深地[11×10km]</p><hr>
+<p>0/11×10km</p>
+</div>
+<div style=
+"background-color:#454B58;
+margin-right:1em;
+width:10em;height:15em">
+<p>目的地</p>
+<p>？</p><hr>
+<p>？/？</p>
+</div>
+</div>
+@endsection
 
-        .yellowL{color:#EDE5BB}
-
-        .idDisp{text-align:right;}
-        .logoutbutton{text-align:right;float:right;}
-
-        .textbox{text-align:right; font-size:14px; position:relative;margin:35% 5% 5% 30%;
-        padding:0.5em;0em;border:solid 1px #FFFFFF;}
-
-        .conductress img{position:absolute;bottom:0;max-height:90%;max-width:90%}
-
-    </style>
-
-</head>
-
-
-<body>
-
-<h1>countrain<span class="period">.</div></h1>
-
-<div class="idDisp">お客様の名前：{{$idDisp}}</div>
-
-<div class="logoutbutton"><a href="logout" class="bButton">ログアウト</a></div>
-
-<div class="textbox">countrainにようこそ！</div>
-
-<div class="conductress"><img src= {{asset('/img/conductress.png')}} ></div>
+@section('textbox',$welcomeText[$randomN])
 
 
-</body>
-
-
-
-</html>
+@section('conductress')
+<img src= {{asset('/img/conductress.png')}} >
+@endsection

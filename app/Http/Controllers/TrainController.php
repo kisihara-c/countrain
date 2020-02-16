@@ -26,9 +26,19 @@ class TrainController extends Controller
 
         $email = $request->email;
         $password = $request->password;
-        Auth::attempt(['email'=>$email,'password'=>$password]);
+        if(Auth::attempt(['email'=>$email,'password'=>$password])){
+            
+            return view('ct-main',['idDisp' => Auth::user()->name]);
+        }
+        else{
+            
+            return
+            ("<html><head><title>きっぷがへんです</title></head>
+            <body><p>うーん？？？　合言葉が間違っています。戻るボタンから再ログインをお願いします。</p></body></html>");
+            
+        }
 
-        return view('ct-main',['idDisp' => Auth::user()->name]);
+        
     }
 
     public function logout(Request $request){
