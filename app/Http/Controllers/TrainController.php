@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class TrainController extends Controller
 {
@@ -28,7 +29,9 @@ class TrainController extends Controller
         $password = $request->password;
         if(Auth::attempt(['email'=>$email,'password'=>$password])){
             
-            return view('ct-main',['idDisp' => Auth::user()->name]);
+            $name = Auth::user()->name;
+            $item = DB::table('ctroutemaps')->where('authUser',$name)->first();
+            return view('ct-main',['idDisp' => Auth::user()->name,'item'=>$item]);
         }
         else{
             

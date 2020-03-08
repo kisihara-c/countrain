@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>countrain-first-1</title>
+    <title>countrain</title>
     <style>
         body{background-color:#0c0c0f;color:#FFFFFF}
 
@@ -20,6 +20,8 @@
         padding:0.5em;0em;border:solid 1px #FFFFFF;}
 
         .conductress img{position:absolute;bottom:0;max-height:90%;max-width:90%}
+
+        .menuBlock{display:flex;position:relative;justify-content:flex-end;margin-top:2%;}
 
     </style>
 
