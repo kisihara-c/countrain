@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>countrain</title>
+    <title>@yield('title')</title>
     <style>
         body{background-color:#0c0c0f;color:#FFFFFF}
 
@@ -32,7 +32,7 @@
 
 <h1>countrain<span class="period">.</span></div></h1>
 
-<div class="idDisp">お客様の名前：{{$idDisp}}</div>
+<div class="idDisp">お客様の名前：{{Auth::user()->name}}</div>
 
 <div class="logoutbutton"><a href="logout" class="bButton">ログアウト<span class="period">.</span></a></div>
 

@@ -31,7 +31,7 @@ class TrainController extends Controller
             
             $name = Auth::user()->name;
             $item = DB::table('ctroutemaps')->where('authUser',$name)->first();
-            return view('ct-main',['idDisp' => Auth::user()->name,'item'=>$item]);
+            return view('ct-main',['item'=>$item]);
         }
         else{
             

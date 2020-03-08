@@ -1,6 +1,6 @@
 @extends('layouts.ct-base')
 
-@section('title','countrain')
+@section('title','countrain-main')
 
 @php
 $welcomeText = [
@@ -20,7 +20,7 @@ $randomN = rand(0,count($welcomeText)-1);
 "background-color:#454B58;
 margin-left:2em;margin-right:2em;
 width:10em;height:15em;">
-<a href="ct-route1" style="display:block;width:10em;height:15em;position:absolute;"></a>
+<a href="ct-route-1" style="display:block;width:10em;height:15em;position:absolute;"></a>
 <p>目的地</p>
 <p>{{$item->route1LastStop}}[{{$item->route1NumberObStation}}×{{$item->route1Unit}}]</p><hr>
 <p>{{$item->route1CurrentLocation}}×{{$item->route1Unit}}</p>
@@ -31,13 +31,13 @@ width:10em;height:15em;">
 "background-color:#454B58;
 margin-right:1em;
 width:10em;height:15em">
-<a href="ct-route2" style="display:block;width:10em;height:15em;position:absolute;"></a>
 @if(empty($item->route2LastStop))
 <p>目的地</p>
 <p>？</p>
 <hr>
 <p>？/？</p>
 @else
+<a href="ct-route-2" style="display:block;width:10em;height:15em;position:absolute;"></a>
 <p>目的地</p>
 <p>{{$item->route2LastStop}}[{{$item->route2NumberObStation}}×{{$item->route2Unit}}]</p><hr>
 <p>{{$item->route2CurrentLocation}}×{{$item->route2Unit}}</p>
